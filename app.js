@@ -72,3 +72,29 @@ function ekle1() {
     img.style.display = "none";
   }, 2000);
 }
+//******************************************* */
+
+const input = document.querySelector(".cp");
+const btn = document.querySelector("button");
+sass = 0;
+btn.addEventListener("click", () => {
+  const body = document.querySelector("body");
+  const span = document.createElement("span");
+  span.classList.add("pop");
+  body.appendChild(span);
+  sass += 30;
+
+  span.innerHTML = "Giriş yapıldı";
+  span.style.bottom += sass + "px";
+  console.log(span.style.bottom, typeof span.style.bottom);
+  console.log(sass);
+  if (sass > 180) {
+    sass = 0;
+    span.style.bottom = 30 + "px";
+    console.log(span.style.bottom, typeof span.style.bottom);
+  }
+
+  setInterval(function () {
+    span.remove();
+  }, 1000);
+});
