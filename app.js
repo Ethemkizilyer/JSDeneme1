@@ -34,12 +34,12 @@ function ileri2() {
 }
 function geri1() {
   sag1 -= 1;
-  if (sag1 >= 700) {
+  if (sag1 >= 600) {
     kutu2.style.left = sag1 + "px";
     kutu2.innerHTML = sag1 + "px";
   } else {
-    clearInterval(sagdur1);
     setTimeout(ekle1, 1);
+    clearInterval(sagdur1);
     sagdur2 = setInterval(geri2, 10);
   }
 }
