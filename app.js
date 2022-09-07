@@ -6,7 +6,7 @@ let img = document.querySelector("img");
 let sol1 = 0,
   sol2 = 700,
   sag1 = 1260,
-  sag2 = 500;
+  sag2 = 600;
 let soldur1, soldur2, sagdur1, sagdur2;
 
 
@@ -34,7 +34,7 @@ function ileri2() {
 }
 function geri1() {
   sag1 -= 1;
-  if (sag1 >= 600) {
+  if (sag1 >= 700) {
     kutu2.style.left = sag1 + "px";
     kutu2.innerHTML = sag1 + "px";
   } else {
